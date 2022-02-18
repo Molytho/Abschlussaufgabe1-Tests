@@ -8,6 +8,7 @@ import org.junit.runners.Suite;
     ParserExceptionTests.class,
     ParserNestedTests.class,
     ParserOneLevelTests.class,
+    ParserToStringTests.class
 })
 public class Tests {
 }

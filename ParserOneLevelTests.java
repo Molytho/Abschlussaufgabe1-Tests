@@ -4,7 +4,6 @@ import edu.kit.informatik.IP;
 import edu.kit.informatik.Network;
 import edu.kit.informatik.ParseException;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
