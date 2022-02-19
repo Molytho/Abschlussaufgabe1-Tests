@@ -1,4 +1,4 @@
-package edu.kit.informatik.tests;
+package edu.kit.informatik.tests.network;
 
 import edu.kit.informatik.IP;
 import edu.kit.informatik.Network;
@@ -32,6 +32,6 @@ public class ParserToStringTests {
 
     @Test
     public void test() throws ParseException {
-        Assert.assertEquals(new Network(parameter).toString(new IP(root)), expected);
+        Assert.assertEquals(expected, new Network(parameter).toString(new IP(root)));
     }
 }

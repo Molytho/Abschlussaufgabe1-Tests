@@ -1,4 +1,4 @@
-package edu.kit.informatik.tests;
+package edu.kit.informatik.tests.network;
 
 import edu.kit.informatik.Network;
 import edu.kit.informatik.ParseException;
@@ -39,8 +39,9 @@ public class ParserExceptionTests {
             "(0.0.0.2 01.1.1.1)",
             "(0.0.0.1 (0.2.3.4 0.4.4.4) 0.4.4.4)",
             "( 1.1.1.1)",
-            "(266.266.266.266 1.1.1.1)"
-        );
+            "(266.266.266.266 1.1.1.1)",
+            "(0.0.0.1 ((0.2.3.4 0.4.4.5) 0.4.4.4)"
+            );
     }
 
     @Parameterized.Parameter

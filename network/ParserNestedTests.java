@@ -1,4 +1,4 @@
-package edu.kit.informatik.tests;
+package edu.kit.informatik.tests.network;
 
 import edu.kit.informatik.Network;
 import edu.kit.informatik.ParseException;
@@ -18,14 +18,6 @@ public class ParserNestedTests {
         return Arrays.asList(new Object[][] {
             {"(0.0.0.0 (0.1.1.1 2.2.2.2) 3.3.3.3)",
                 new String[][] {new String[] {"(0.0.0.0 0.1.1.1 3.3.3.3)"}, new String[] {"(0.1.1.1 2.2.2.2)"}}},
-            {"(0.0.0.1 (0.1.1.1 2.2.2.2) 3.3.3.3)",
-                new String[][] {new String[] {"(0.0.0.1 0.1.1.1 3.3.3.3)"}, new String[] {"(0.1.1.1 2.2.2.2)"}}},
-            {"(0.2.0.0 (0.1.1.1 2.2.2.2) 3.3.3.3)",
-                new String[][] {new String[] {"(0.2.0.0 0.1.1.1 3.3.3.3)"}, new String[] {"(0.1.1.1 2.2.2.2)"}}},
-            {"(0.0.0.0 (1.1.1.1 2.2.2.2) 3.3.3.3)",
-                new String[][] {new String[] {"(0.0.0.0 1.1.1.1 3.3.3.3)"}, new String[] {"(1.1.1.1 2.2.2.2)"}}},
-            {"(0.0.0.0 (0.1.1.1 2.2.2.2) 3.3.5.3)",
-                new String[][] {new String[] {"(0.0.0.0 0.1.1.1 3.3.5.3)"}, new String[] {"(0.1.1.1 2.2.2.2)"}}},
             {"(0.0.0.0 (0.1.1.1 (2.2.2.2 9.9.9.9)) (3.3.5.3 9.7.7.7))",
                 new String[][] {new String[] {"(0.0.0.0 0.1.1.1 3.3.5.3)"}, new String[] {"(0.1.1.1 2.2.2.2)", "(3.3.5.3 9.7.7.7)"}, new String[] {"(2.2.2.2 9.9.9.9)"}}}
         });
@@ -59,6 +51,6 @@ public class ParserNestedTests {
 
     @Test
     public void test() throws ParseException {
-        Assert.assertEquals(new Network(parameter), expected);
+        Assert.assertEquals(expected, new Network(parameter));
     }
 }

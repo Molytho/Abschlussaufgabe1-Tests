@@ -1,4 +1,4 @@
-package edu.kit.informatik.tests;
+package edu.kit.informatik.tests.network;
 
 import edu.kit.informatik.ParseException;
 import edu.kit.informatik.IP;

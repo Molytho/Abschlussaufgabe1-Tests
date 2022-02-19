@@ -1,4 +1,4 @@
-package edu.kit.informatik.tests;
+package edu.kit.informatik.tests.network;
 
 import edu.kit.informatik.IP;
 import edu.kit.informatik.Network;
@@ -21,6 +21,10 @@ public class ParserOneLevelTests {
                 new Network(new IP("0.0.0.0"), List.of(new IP("0.1.1.1"), new IP("2.2.2.2"), new IP("3.3.3.3")))},
             {"(0.0.0.0 0.1.1.1 2.2.2.2 3.3.3.3)",
                 new Network(new IP("0.0.0.0"), List.of(new IP("0.1.1.1"), new IP("3.3.3.3"), new IP("2.2.2.2")))},
+            {"(0.0.0.0 2.2.2.2 0.1.1.1 3.3.3.3)",
+                new Network(new IP("0.0.0.0"), List.of(new IP("0.1.1.1"), new IP("2.2.2.2"), new IP("3.3.3.3")))},
+            {"(0.0.0.0 0.1.1.1 3.3.3.3 2.2.2.2)",
+                new Network(new IP("0.0.0.0"), List.of(new IP("0.1.1.1"), new IP("3.3.3.3"), new IP("2.2.2.2")))},
         });
     }
 
@@ -31,6 +35,6 @@ public class ParserOneLevelTests {
 
     @Test
     public void test() throws ParseException {
-        Assert.assertEquals(new Network(parameter), expected);
+        Assert.assertEquals(expected, new Network(parameter));
     }
 }
