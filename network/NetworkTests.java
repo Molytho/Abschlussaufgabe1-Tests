@@ -6,6 +6,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
     NetworkAddTests.class,
+    NetworkAddMultipleTests.class,
     NetworkConnectTests.class,
     NetworkContainsTests.class,
     NetworkDisconnectTests.class,

@@ -28,11 +28,11 @@ public class NetworkListTests {
     public String network;
 
     @Parameterized.Parameter(1)
-    public List<String> ipStrs;
+    public List<String> ipStrings;
 
     @Test
     public void test() throws ParseException {
-        List<IP> ips = ipStrs.stream().map(ip -> {
+        List<IP> ips = ipStrings.stream().map(ip -> {
             try {
                 return new IP(ip);
             } catch (ParseException e) {

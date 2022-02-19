@@ -29,8 +29,10 @@ public class NetworkGetRouteTests {
                 {"0.0.0.0", "0.0.0.0", List.of("0.0.0.0")},
                 {"0.0.0.0", "1.1.1.1", List.of("0.0.0.0", "1.1.1.1")},
                 {"0.0.0.0", "2.2.2.2", List.of("0.0.0.0", "3.3.3.3", "2.2.2.2")},
+                {"1.1.1.1", "2.2.2.2", List.of("1.1.1.1", "0.0.0.0", "3.3.3.3", "2.2.2.2")},
                 {"0.0.0.0", "5.5.5.5", Collections.emptyList()},
                 {"0.0.0.0", null, Collections.emptyList()},
+                {null, "0.0.0.0", Collections.emptyList()},
         });
     }
 
