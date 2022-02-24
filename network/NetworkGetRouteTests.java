@@ -26,7 +26,7 @@ public class NetworkGetRouteTests {
     @Parameterized.Parameters
     public static Collection<Object[]> cases() {
         return Arrays.asList(new Object[][]{
-                {"0.0.0.0", "0.0.0.0", List.of("0.0.0.0")},
+                {"0.0.0.0", "0.0.0.0", Collections.emptyList()},
                 {"0.0.0.0", "1.1.1.1", List.of("0.0.0.0", "1.1.1.1")},
                 {"0.0.0.0", "2.2.2.2", List.of("0.0.0.0", "3.3.3.3", "2.2.2.2")},
                 {"1.1.1.1", "2.2.2.2", List.of("1.1.1.1", "0.0.0.0", "3.3.3.3", "2.2.2.2")},
