@@ -16,6 +16,7 @@ public class NetworkAddTests {
     public static Collection<Object[]> cases() {
         return Arrays.asList(new Object[][] {
                 {"(0.0.0.0 1.1.1.1)", "(1.1.1.1 2.2.2.2)", "(0.0.0.0 (1.1.1.1 2.2.2.2))", true},
+                {"(0.0.0.0 1.1.1.1 2.2.2.2)", "(0.0.0.0 1.1.1.1)", "(0.0.0.0 1.1.1.1 2.2.2.2)", false}, //The instance isn't change so this is false
                 {"(0.0.0.0 1.1.1.1)", "(0.0.0.0 1.1.1.1)", "(0.0.0.0 1.1.1.1)", false}, //The instance isn't change so this is false
                 {"(0.0.0.0 1.1.1.1)", "(1.1.1.1 0.0.0.0)", "(0.0.0.0 1.1.1.1)", false}, //The instance isn't change so this is false
                 {"(0.0.0.0 (1.1.1.1 2.2.2.2))", "(2.2.2.2 0.0.0.0)", "(0.0.0.0 (1.1.1.1 2.2.2.2))", false},
