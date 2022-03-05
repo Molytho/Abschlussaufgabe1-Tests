@@ -18,6 +18,7 @@ import org.junit.runners.Suite;
     ParserNestedTests.class,
     ParserOneLevelTests.class,
     ParserToStringTests.class,
+    NetworkEqualsTest.class
 })
 public class NetworkTests {
 }
